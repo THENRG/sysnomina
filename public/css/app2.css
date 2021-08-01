@@ -1,0 +1,374 @@
+html, body {
+    background: #f2f4fd;
+}
+
+/*
+*
+*
+*   INTERFAZ DE AUTENTICACION 
+*
+*
+*/
+
+.auth-max-width {
+    width: 300px !important;
+}
+
+.auth-max-width-md {
+    width: 400px !important;
+}
+
+.sysnomina-auth-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #00185E;
+}
+
+.auth-header {
+    height: 64px;
+    width: 64px;
+    margin: 32px auto 6px;
+    border-radius: 10rem;
+    background: #00185E;
+}
+
+.auth-content {
+    margin-top: 10px;
+}
+
+.auth-icon {
+    font-size: 32px;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.auth-header-text {
+    color: #00185E;
+}
+
+.btn-flat {
+    border-radius: 0px !important;
+}
+
+.auth-icon-left {
+    font-size: 42px;
+    line-height: 0;
+}
+/*
+*
+*
+*   INTERFAZ DE CONTENIDO 
+*
+*
+*/
+
+
+.dropdown-toggle:after {
+    float: right;
+}
+
+.separator-breadcrumb {
+    border-top: 1px solid #dee2e6 !important;
+    margin-bottom: 2rem;
+}
+
+.dropdown-toggle:after {
+    float: none !important;
+}
+
+.content-header {
+    height: 60px !important;
+}
+
+.target-icon {
+    font-size: 54px;
+    opacity: 0.5;
+}
+
+.card {
+    box-shadow: 0 4px 20px 1px rgb(0 0 0 / 6%), 0 1px 4px rgb(0 0 0 / 8%);
+}
+
+@media screen and (max-width: 560px) {
+    .card-mobile {
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+
+    .sysnomina-auth-form {
+        background: none;
+    }
+
+}
+
+.user-icon {
+    font-size: 32px;
+}
+
+
+
+
+/** NUEVO DISEÑO **/
+
+#sysnomina-app {
+    position: relative;
+    height: 100vh;
+}
+
+#sidebarToggleHolder {
+    visibility: hidden;
+}
+
+.div-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 300px;
+    transition: 0.2s all;
+}
+
+.div-navleft {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    transition: 0.2s all;
+    z-index: 999;
+}
+
+.div-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-logo, .div-bottom {
+   height: 80px; 
+}
+
+.div-header {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+}
+
+.nav-left {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.div-content {
+    padding: 1rem;
+}
+
+.div-navleft.hidden {
+    left: -300px;
+}
+
+.div-navleft.hidden ~ .div-wrapper {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .div-wrapper {
+        margin-left: 0;
+    }
+
+    .div-navleft {
+        left: -300px;
+    }
+    
+    .div-navleft.hidden {
+        left: 0;
+    }
+
+    .div-wrapper {
+        margin-left: 0;
+    }
+
+    #sidebarToggleHolder {
+        visibility: visible;
+    }
+}
+
+.navbar-toggler-mobile {
+    visibility: hidden;
+    position: absolute;
+}
+
+@media screen and (max-width: 560px) {
+    .div-navleft.hidden {
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar-toggler-mobile {
+        visibility: visible;
+    } 
+}
+
+.card-flat {
+    border-radius: 0;
+}
+
+.nav-link {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+.nav-link > span {
+    margin-left: 1rem;
+}
+
+.nav-link > .bi {
+    font-size: 20px;
+}
+
+.div-nav .nav-link:hover, .div-nav .nav-link.active {
+  background-color: #5b72d6;
+  opacity: 1;
+}
+
+.div-nav .nav-link span {
+  font-size: 1rem;
+}
+
+.div-nav .dropdown-toggle:after {
+  display: none;
+}
+
+.div-nav .dropdown-menu {
+  position: relative !important;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  transform: unset !important;
+  top: unset !important;
+  left: unset !important;
+  min-width: unset !important;
+  background-color: #3a51b5;
+  border-radius: 0 !important;
+}
+
+.div-nav .dropdown-item {
+  padding: 0.8rem 0 0.8rem 1.5rem;
+  margin: 0;
+}
+
+.div-nav .dropdown-item:hover, .div-nav .dropdown-item:active, .dropdown-item:focus {
+  background-color: #6177d9;
+}
+
+.div-nav .nav-link {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  font-size: 1rem;
+  position: relative;
+  opacity: 0.9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/*
+*
+*
+*
+*
+*
+*
+*/
+
+
+
+.table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+.table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+.table th,
+.table td {
+  padding: .625em;
+}
+
+.table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 468px) {
+  .table {
+    table-layout: fixed;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+    border: 0;
+  }
+
+  .table caption {
+    font-size: 1.3em;
+  }
+  
+  .table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  .table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  .table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .table td:last-child {
+    border-bottom: 0;
+  }
+}
