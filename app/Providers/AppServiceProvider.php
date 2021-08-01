@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Blade;
 use Money\Money;
 use Carbon\Carbon;
+use Illuminate\Routing\UrlGenerator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,7 +18,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+       if (env('REDIRECT_HTTPS')) {
+           $this->app['request']->server->set('HTTPS', true);
+       }
     }
 
     /**
@@ -34,9 +37,13 @@ class AppServiceProvider extends ServiceProvider
         });
 
         // Configuración para fechas en español
-     Carbon::setUTF8(true);
-      Carbon::setLocale(config('app.locale'));
-      setlocale(LC_TIME, config('app.locale'));
+        Carbon::setUTF8(true);
+        Carbon::setLocale(config('app.locale'));
+        setlocale(LC_TIME, config('app.locale'));
 
+        // HEROKU
+       if (env('REDIRECT_HTTPS')) {
+           $url->formatScheme('https://');
+       }
     }
 }
